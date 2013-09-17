@@ -1,10 +1,25 @@
-
-<div id="map" style="height: 240px;"></div>
-<script language="JavaScript">
-    var map = L.map('map').setView([51.505, -0.09], 13);
-    L.tileLayer('http://{s}.tile.cloudmade.com/4352911a0e6445f98792bd683486e79b/997/256/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-        maxZoom: 18
-    }).addTo(map);
-alert("WTF!");
-</script>
+<div class="container">
+    <div id="map" ></div>   
+    <div id="wfsid" class="wfs">
+        <table border="0" class="wfstable">
+            <thead>
+                <tr>WFS data</tr></thead>
+            <tr>
+                <td>Intact: </td>
+                <td>{{wfsdata.intact}}</td>
+            </tr>
+            <tr>
+                <td>Light damage: </td>
+                <td>{{wfsdata.light}}</td>
+            </tr>
+            <tr>
+                <td>Heavy damage: </td>
+                <td>{{wfsdata.heavy}}</td>
+            </tr>
+            <tr>
+                <td>Collapsed: </td>
+                <td>{{wfsdata.collapsed}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

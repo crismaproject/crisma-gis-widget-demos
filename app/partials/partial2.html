@@ -1,5 +1,25 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="container">
+    <div id="map" ></div>   
+    <div id="wfsid" class="wfs">
+        <table border="0" class="wfstable">
+            <thead>
+                <tr>WFS data</tr></thead>
+            <tr>
+                <td>Intact: </td>
+                <td>{{wfsdata.intact}}</td>
+            </tr>
+            <tr>
+                <td>Light damage: </td>
+                <td>{{wfsdata.light}}</td>
+            </tr>
+            <tr>
+                <td>Heavy damage: </td>
+                <td>{{wfsdata.heavy}}</td>
+            </tr>
+            <tr>
+                <td>Collapsed: </td>
+                <td>{{wfsdata.collapsed}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
